@@ -15,7 +15,7 @@ namespace BlackJack
         string[] cartasJogador1 = new string[5];
         string[] cartasJogador2 = new string[5];
 
-        // Contadores de pontuaÁ„o
+        // Contadores de pontua√ß√£o
         int pontosJogador1 = 0;
         int pontosJogador2 = 0;
 
@@ -28,7 +28,7 @@ namespace BlackJack
             InitializeComponent();
         }
 
-        // MÈtodo para distribuir cartas para o jogador
+        // M√©todo para distribuir cartas para o jogador
         private void DistribuirCarta(int jogador)
         {
             string carta = baralho[random.Next(baralho.Count)]; // Sorteia uma carta
@@ -60,7 +60,7 @@ namespace BlackJack
             }
         }
 
-        // MÈtodo para atualizar a imagem da carta no PictureBox correspondente
+        // M√©todo para atualizar a imagem da carta no PictureBox correspondente
         private void AtualizarImagem(int jogador, int indice, string carta)
         {
             string caminhoImagem = $"Cartas/{carta}.png"; // Caminho da imagem com base no nome da carta
@@ -108,13 +108,13 @@ namespace BlackJack
             }
         }
 
-        // MÈtodo para calcular os pontos de uma carta
+        // M√©todo para calcular os pontos de uma carta
         private int CalcularPontos(string carta)
         {
             switch (carta)
             {
                 case "As":
-                    return 11; // O valor do "As" pode ser 1 ou 11, mas vamos considerar 11 por padr„o.
+                    return 11; 
                 case "Dois":
                     return 2;
                 case "Tres":
@@ -138,14 +138,14 @@ namespace BlackJack
                 case "Rei":
                     return 10; // Valete, Dama e Rei valem 10 pontos
                 default:
-                    return 0; // Caso a carta seja inv·lida ou n„o reconhecida
+                    return 0; // Caso a carta seja inv√°lida ou n√£o reconhecida
             }
         }
 
-        // Eventos de clique dos botıes para pedir carta
+        // Eventos de clique dos bot√µes para pedir carta
         private void btnPedirJogador1_Click(object sender, EventArgs e)
         {
-            if (!jogador1Parou) // Se o jogador 1 n„o parou
+            if (!jogador1Parou) // Se o jogador 1 n√£o parou
             {
                 DistribuirCarta(1); // Distribui carta para o jogador 1
                 lblPontosJogador1.Text = $"Pontos: {pontosJogador1}"; // Atualiza os pontos do jogador 1
@@ -155,7 +155,7 @@ namespace BlackJack
 
         private void btnPedirJogador2_Click(object sender, EventArgs e)
         {
-            if (!jogador2Parou) // Se o jogador 2 n„o parou
+            if (!jogador2Parou) // Se o jogador 2 n√£o parou
             {
                 DistribuirCarta(2); // Distribui carta para o jogador 2
                 lblPontosJogador2.Text = $"Pontos: {pontosJogador2}"; // Atualiza os pontos do jogador 2
@@ -169,16 +169,16 @@ namespace BlackJack
             if (jogador == 1 && pontosJogador1 > 21)
             {
                 MessageBox.Show("Jogador 1 estourou! O jogador 2 vence.");
-                btnPedirJogador1.Enabled = false; // Desabilita o bot„o de pedir para o jogador 1
-                btnPedirJogador2.Enabled = false; // Desabilita o bot„o de pedir para o jogador 2
-                btnMotrarVencedor.Enabled = true; // Habilita o bot„o para mostrar vencedor
+                btnPedirJogador1.Enabled = false; // Desabilita o bot√£o de pedir para o jogador 1
+                btnPedirJogador2.Enabled = false; // Desabilita o bot√£o de pedir para o jogador 2
+                btnMotrarVencedor.Enabled = true; // Habilita o bot√£o para mostrar vencedor
             }
             else if (jogador == 2 && pontosJogador2 > 21)
             {
                 MessageBox.Show("Jogador 2 estourou! O jogador 1 vence.");
-                btnPedirJogador1.Enabled = false; // Desabilita o bot„o de pedir para o jogador 1
-                btnPedirJogador2.Enabled = false; // Desabilita o bot„o de pedir para o jogador 2
-                btnMotrarVencedor.Enabled = true; // Habilita o bot„o para mostrar vencedor
+                btnPedirJogador1.Enabled = false; // Desabilita o bot√£o de pedir para o jogador 1
+                btnPedirJogador2.Enabled = false; // Desabilita o bot√£o de pedir para o jogador 2
+                btnMotrarVencedor.Enabled = true; // Habilita o bot√£o para mostrar vencedor
             }
         }
 
@@ -220,7 +220,7 @@ namespace BlackJack
             picCartaJogador2_4.Image = null;
             picCartaJogador2_5.Image = null;
 
-            // Resetar vari·veis de controle
+            // Resetar vari√°veis de controle
             for (int i = 0; i < cartasJogador1.Length; i++)
             {
                 cartasJogador1[i] = null; // Limpar as cartas dos jogadores
@@ -230,7 +230,7 @@ namespace BlackJack
                 cartasJogador2[i] = null;
             }
 
-            // Reabilitar os botıes
+            // Reabilitar os bot√µes
             btnPedirJogador1.Enabled = true;
             btnPedirJogador2.Enabled = true;
             btnMotrarVencedor.Enabled = false;
@@ -245,7 +245,7 @@ namespace BlackJack
             // Marcar que o jogador 1 parou de pedir cartas
             jogador1Parou = true;
 
-            // Desabilitar o bot„o de pedir carta para o jogador 1
+            // Desabilitar o bot√£o de pedir carta para o jogador 1
             btnPedirJogador1.Enabled = false;
 
             // Verificar se ambos os jogadores pararam
@@ -257,7 +257,7 @@ namespace BlackJack
             // Marcar que o jogador 2 parou de pedir cartas
             jogador2Parou = true;
 
-            // Desabilitar o bot„o de pedir carta para o jogador 2
+            // Desabilitar o bot√£o de pedir carta para o jogador 2
             btnPedirJogador2.Enabled = false;
 
             // Verificar se ambos os jogadores pararam
@@ -269,8 +269,8 @@ namespace BlackJack
             // Se ambos os jogadores pararam, o jogo terminou e podemos verificar os pontos
             if (jogador1Parou && jogador2Parou)
             {
-                // Mostrar o vencedor, levando em consideraÁ„o que ninguÈm pode ter estourado
-                btnMotrarVencedor.Enabled = true; // Habilitar bot„o para mostrar vencedor
+                // Mostrar o vencedor, levando em considera√ß√£o que ningu√©m pode ter estourado
+                btnMotrarVencedor.Enabled = true; // Habilitar bot√£o para mostrar vencedor
             }
         }
     }
