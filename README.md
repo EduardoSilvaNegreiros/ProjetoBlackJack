@@ -1,5 +1,7 @@
 # Blackjack - Jogo de Cartas com Interface Gráfica em C#
 
+![Blackjack](https://github.com/EduardoSilvaNegreiros/ProjetoBlackJack/blob/master/blackjack.png?raw=true)
+
 Este projeto é uma implementação do clássico jogo **Blackjack**, desenvolvido em **C#** no **Visual Studio 2022**, com uma interface gráfica criada com **Windows Forms**. O objetivo do jogo é competir contra o dealer (casa) para alcançar a pontuação de 21, ou o mais próximo possível disso, sem ultrapassá-la.
 
 A versão gráfica do Blackjack oferece uma experiência interativa, onde o jogador pode ver as cartas distribuídas, fazer suas escolhas de "Pedir" ou "Parar" e acompanhar sua pontuação em tempo real. O dealer segue a regra clássica de pedir cartas até atingir pelo menos 17 pontos.
