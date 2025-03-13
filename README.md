@@ -45,4 +45,4 @@ O jogo tem uma interface simples e intuitiva, utilizando componentes gráficos c
 
 ---
 
-Este projeto foi desenvolvido como uma forma de aprender mais sobre lógica de jogos, programação orientada a objetos e desenvolvimento de interfaces gráficas, com foco em criar uma experiência de usuário agradável e intuitiva.
+Este projeto foi desenvolvido como uma forma de aprender mais sobre lógica de jogos, programação orientada a objetos e desenvolvimento de interfaces gráficas, com foco em criar uma experiência de usuário agradável e intuitiva da melhor maneira.
